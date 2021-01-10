@@ -1,0 +1,211 @@
+
+.game{
+    width: 600px;
+    height: 200px;
+    border-bottom: 10px solid darkgoldenrod;
+    border-image: url("../img/road.png") 50 round;
+    margin: auto;
+    position: relative;
+    background-color: lightskyblue;
+    overflow: hidden;
+}
+#cloudBig{
+    width: 65px;
+    height: 25px;
+    background-image: url("../img/cloudBig.png");
+    background-size: 65px 25px;
+    position: absolute;
+    top: 60px;
+    animation: moveBigCloud 25s infinite linear;
+}
+#cloudSmall{
+    width: 33px;
+    height: 25px;
+    background-image: url("../img/cloudSmall.png");
+    background-size: 33px 25px;
+    position: absolute;
+    top: 30px;
+    animation: moveSmallCloud 16s infinite linear;
+}
+#cloudSmall2{
+    width: 33px;
+    height: 25px;
+    background-image: url("../img/cloudSmall.png");
+    background-size: 33px 25px;
+    position: absolute;
+    top: 90px;
+    animation: moveSmallCloud 10s infinite linear;
+}
+@keyframes moveBigCloud {
+    0%{
+        left: 600px;
+    }
+    100%{
+        left: -65px;
+    }
+}
+@keyframes moveSmallCloud {
+    0%{
+        left: 567px;
+    }
+    100%{
+        left: -33px;
+    }
+}
+
+#mario{
+    width: 50px;
+    height: 50px;
+    background-image: url("../img/newMario1.png");
+    background-size: 50px 50px;
+    position: absolute;
+    top: 150px;
+}
+.moveMario{
+    animation: marioMove 0.8s infinite linear;
+}
+
+@keyframes marioMove {
+    0%{
+        background-image: url("../img/newMario3.png");
+    }
+    25%{
+        background-image: url("../img/newMario2.png");
+    }
+    50%{
+        background-image: url("../img/newMario3.png");
+    }
+    75%{
+        background-image: url("../img/newMario2.png");
+    }
+    100%{
+        background-image: url("../img/newMario3.png");
+    }
+}
+#mushroom{
+    width: 25px;
+    height: 30px;
+    background-image: url("../img/goomba.png");
+    background-size: 25px 30px;
+    position: absolute;
+    top: 170px;
+    left: 575px;
+}
+.moveMushroom{
+    animation: mushroomMove 2s infinite linear;
+}
+
+@keyframes mushroomMove {
+    0%{
+        left: 600px;
+    }
+    30%{
+        background-image: url("../img/goomba2.png");
+    }
+    60%{
+        background-image: url("../img/goomba.png");
+    }
+    90%{
+        background-image: url("../img/goomba2.png");
+    }
+    100%{
+        left: -30px;
+    }
+}
+
+.jump{
+    animation: jump 0.5s linear;
+}
+
+@keyframes jump {
+    0%{
+        top: 150px;
+    }
+    30%{
+        top: 110px;
+    }
+    50%{
+        top: 80px;
+    }
+    80%{
+        top: 110px;
+    }
+    100%{
+        top: 150px;
+    }
+}
+.bestScore{
+    color: darkgoldenrod;
+    position: absolute;
+    left: 20px;
+    font-weight: bold;
+    opacity: 0.9;
+}
+.score{
+    color: darkgoldenrod;
+    position: absolute;
+    right: 20px;
+}
+.start{
+    background-color: #ec3331;
+    color: black;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    border-radius: 10px;
+    padding: 5px 15px;
+    border: 2px solid black;
+    font-weight: bold;
+    cursor: pointer;
+}
+.start:hover{
+    box-shadow: 0 0 10px red;
+}
+.start:focus{
+    outline: none;
+}
+.rule{
+    position: absolute;
+    left: 50%;
+    transform: translate(-50%, 0);
+    top: -10px;
+    font-family: Calibri;
+}
+.gameover{
+    display: none;
+    width: 500px;
+    flex-direction: column;
+    position: absolute;
+    left: 50%;
+    transform: translate(-50%, 0);
+    top: 50px;
+    font-family: Arial;
+    justify-content: center;
+    align-items: center;
+}
+.info{
+    font-weight: bold;
+    font-size: 42px;
+    color: #ec3331;
+    margin: 10px;
+    letter-spacing: 10px;
+}
+.repeat{
+    width: 50px;
+    background-color: #ec3331;
+    color: black;
+    border-radius: 10px;
+    border: 2px solid black;
+    cursor: pointer;
+}
+.repeat img{
+    width: 30px;
+    height: 30px;
+}
+.repeat:hover{
+    box-shadow: 0 0 10px red;
+}
+.repeat:focus{
+    outline: none;
+}
